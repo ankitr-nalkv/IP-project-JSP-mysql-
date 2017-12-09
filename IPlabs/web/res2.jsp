@@ -61,7 +61,7 @@
 	<!-- Navigation -->
 	<div id="navigation">
             <ul><div class="toolbar">
-                    <li><a href="/IPlabs"><span style="color:white">Curious</span></a></li>
+                    <li><a href="/IPlabs"><span style="color:white">CURIOUS</span></a></li>
 			<li><a href="/IPlabs/response.jsp?id=${articleDetails.category}"><span style="color:white">SPACE</span></a></li>
 			
                 </div>    
@@ -119,11 +119,11 @@
 					<!-- Content -->
 					<!-- Box -->
 					<div class="box last" id="login Request">
-						<h3>Consectetur  elit</h3>
+						<h3></h3>
 						
-						<p>Aliquam ac congue nunc. Mauris a tortor ut massa egestas tempus. Pellentesque tincidunt fermentum diam sagittis ullamcorper.</p>
+						<p></p>
 						
-						<p>Cras aliquet tellus sed dolor aliquet condimentum &hellip; <a href="#">read more</a></p>
+						<p></p>
 					</div>
 					<!-- /Box -->
 					<div class="cl">&nbsp;</div>

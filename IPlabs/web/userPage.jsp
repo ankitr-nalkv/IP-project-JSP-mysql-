@@ -305,7 +305,7 @@ a:hover {
     <br><br><br><br>
     <center><h1>My Profile</h1></center>
     <hr class="star-primary">
-    <img id="imag1" src="view.jsp">
+    <img id="imag1" src="view.jsp" style="width:225px;hight:225px">
     <div id="head2">
         <br>
         <b>   <font size="5"><pre>        NAME:                     ${roll.first_name} ${roll.last_name}<br>

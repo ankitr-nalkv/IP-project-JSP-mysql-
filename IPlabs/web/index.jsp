@@ -10,7 +10,7 @@
          url = "jdbc:mysql://localhost:3306/IPproj"
          user = "root"  password = "ubuntu123"/>
 <sql:query var="userValues" dataSource="${snapshot}">
-    SELECT members.id FROM article,members WHERE members.id=article.userId and members.uname= ? <sql:param value="<%=session.getAttribute("userid")%>"/> 
+    SELECT members.id FROM members WHERE members.uname= ? <sql:param value="<%=session.getAttribute("userid")%>"/> 
 </sql:query>
 <c:set var="roll" value="${userValues.rows[0]}"/>
 
@@ -122,15 +122,15 @@
           Menu
           <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="navbar-nav ml-auto">
+               <li class="nav-item"style="float: right">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Categories</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Pitch something Interesting</a>
+            <li class="nav-item"style="float: right">
+              <a class="nav-link js-scroll-trigger" href="#contact">Post Article</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item"style="float: right">
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
                <%
@@ -138,15 +138,15 @@
                 %>
                 <!--You are not logged in<br/>
                 <a href="index.jsp">Please Login</a>-->
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="loginPage.jsp">Login</a>
+            <li class="nav-item" style="float: right">
+              <a style="float: right"class="nav-link js-scroll-trigger" href="loginPage.jsp">Login</a>
             </li>
                 <%} else {
                 %>
                 <!--Welcome
                 <a href='logout.jsp'>Log out</a>-->
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="userPage.jsp?id=${roll.id}">Welcome <%=session.getAttribute("userid")%></a>
+                    <img src="view.jsp" style="float:right;height:90%;width:9%;border-radius: 20%"><a style="float: right" class="nav-link js-scroll-trigger" href="userPage.jsp?id=${roll.id}">Welcome <%=session.getAttribute("userid")%></a>
                 </li>
                 <%
                     }
@@ -176,64 +176,38 @@
         <hr class="star-primary">
         <div class="row">
           <div class="col-sm-4 portfolio-item">
-            <a class="portfolio-link" href="" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+            
+               <a href="response.jsp?id=SPACE">  <font size="5"><b>SPACE</b></font><img class="img-fluid" style="width:900px;height:250px;" src="https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee.jpg" alt=""></a>
             </a>
           </div>
           <div class="col-sm-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal2" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/cake.png" alt="">
-            </a>
+            
+             <a href="response.jsp?id=POLITICS"> <font size="5"><b>POLITICS</b></font><img class="img-fluid" style="width:900px;height:250px;" src="https://betanews.com/wp-content/uploads/2014/05/politician-292x300.jpg" alt="">
+              </a>
+              
           </div>
           <div class="col-sm-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal3" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-            </a>
+            
+             <a href="response.jsp?id=HISTORY"> <font size="5"><b>HISTORY</b></font><img style="width:900px;height:250px;" class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTenPXY2JgUNXzYR2aOHPBU0450ysasNerGx21cPniClZWZ3i7m6g" alt="">
+              </a>
           </div>
           <div class="col-sm-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal4" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/game.png" alt="">
-            </a>
+            
+             
+            <a href="response.jsp?id=PLACES"> <font size="5"><b>PLACES</b></font><img style="width:900px;height:250px;" class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSK10gK-SU42yR5IyOK8tKwpLBeZ4Z2-lbsiB2CZTnBaFeN1-b" alt="">
+             </a>
           </div>
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal5" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/safe.png" alt="">
+              
+             <a href="response.jsp?id=SCIENCE"> <font size="5"><b>SCIENCE</b></font><img style="width:350px;height:250px; class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU7oVySAhze11qy2GjDB8im4eZlZuFFNrFHiHaDOSWXqleSQ8t" alt="">
             </a>
           </div>
           <div class="col-sm-4 portfolio-item">
             <a class="portfolio-link" href="#portfolioModal6" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
-            </a>
+              
+               <a href="response.jsp?id=OTHER"> <font size="5"><b>OTHER</b></font><img style="width:350px;height:250px;class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzRQ3Ht5pPfjaAabaYodLJGlrvz2tpXOzlS-UuqK-bpYcAKBX6" alt="">
+              </a>
           </div>
         </div>
       </div>
@@ -301,16 +275,13 @@
         <hr class="star-light">
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+              <p></p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+            <p> </p>
           </div>
           <div class="col-lg-8 mx-auto text-center">
-            <a href="#" class="btn btn-lg btn-outline">
-              <i class="fa fa-download"></i>
-              Download Theme
-            </a>
+            
           </div>
         </div>
       </div>

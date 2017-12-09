@@ -13,6 +13,7 @@
             "root", "ubuntu123");
     Statement st = con.createStatement();
     ResultSet rs;
+    //st.executeUpdate("update members set images=load_file('/home/ankit/Pictures/Screenshots/sticker.png') where id=1");
     rs = st.executeQuery("select * from members where uname='" + userid + "' and pass='" + pwd + "'");
     if (rs.next()) {
         session.setAttribute("userid", userid);

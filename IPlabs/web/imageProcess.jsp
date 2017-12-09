@@ -55,6 +55,7 @@ int count = pstmt.executeUpdate();
 if(count>0)
 {
 out.println("insert successfully");
+response.sendRedirect("index.jsp");
 }
 else
 {

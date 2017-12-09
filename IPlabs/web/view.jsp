@@ -12,11 +12,12 @@ Connection con = null;
 byte[ ] imgData = null ;
 Statement stmt = null;
 ResultSet rs = null;
+String userImageId="13";//request.getParameter("id");
 try {
 Class.forName("com.mysql.jdbc.Driver");
 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/IPproj","root","ubuntu123");
 stmt = con.createStatement();
-rs = stmt.executeQuery("select images from members where id = '9'");
+rs = stmt.executeQuery("select images from members where id = "+userImageId+"");
 if (rs.next()) {
 image = rs.getBlob(1);
 imgData = image.getBytes(1,(int)image.length());
